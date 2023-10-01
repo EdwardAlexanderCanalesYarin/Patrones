@@ -7,7 +7,8 @@ Uso de los patrones de diseño factory method, command y bridge
 Te permite aislar instanciaciones condicionales  en un método y cuando necesitas cambiar esa lógica solo tienes que cambiar un método, no todo el código base.
 Veamos el siguiente bloque de código:
 
-'''ruby class Endpoint
+'''ruby 
+class Endpoint
 	def home(params)
 		if params[:user_type] == “admin”
 			Admin.new
@@ -17,7 +18,6 @@ Veamos el siguiente bloque de código:
 			Guest.new
 		end
 	end
-
 	def contact(params)
 		if params[:user_type] == “admin”
 			Admin.new
@@ -27,7 +27,8 @@ Veamos el siguiente bloque de código:
 			Guest.new
 		end
 	end
-end'''
+end
+'''
 
 
 **Patrón estructural: BRIDGE**
